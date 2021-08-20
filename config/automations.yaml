@@ -1,0 +1,106 @@
+- id: '1607195276280'
+  alias: Árbol de Navidad Show
+  description: Encender el árbol de noche
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: +00:30:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 6c28acef28b2e88091d9d9a48bbdb14a
+    entity_id: switch.bf91bc89d028ab1df6qxgi
+    domain: switch
+  mode: single
+- id: '1607196442980'
+  alias: Apagar árbol Navidad
+  description: ''
+  trigger:
+  - platform: time
+    at: '23:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 6c28acef28b2e88091d9d9a48bbdb14a
+    entity_id: switch.bf91bc89d028ab1df6qxgi
+    domain: switch
+  mode: single
+- id: '1608488896386'
+  alias: Apagar deshumidificador al terminar timer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: timer.deshumidificador_timer
+    from: active
+    to: idle
+  condition: []
+  action:
+  - type: turn_off
+    device_id: d81ed8560be6ee5d841b6d83ccac7982
+    entity_id: switch.bff603553e0421e63danbz
+    domain: switch
+  mode: single
+- id: '1609673519294'
+  alias: Encender calefactor con calefacción
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: climate.calefaccion_xavi
+    to: heating
+    attribute: hvac_action
+  - platform: state
+    entity_id: input_select.actuador_calefaccion
+    to: Calefactor + radiadores
+  condition:
+  - condition: state
+    entity_id: input_select.actuador_calefaccion
+    state: Calefactor + radiadores
+  - condition: state
+    entity_id: climate.calefaccion_xavi
+    state: heating
+    attribute: hvac_action
+  action:
+  - type: turn_on
+    device_id: 6c28acef28b2e88091d9d9a48bbdb14a
+    entity_id: switch.bf91bc89d028ab1df6qxgi
+    domain: switch
+  mode: single
+- id: '1609675120988'
+  alias: Apagar calefactor con calefacción
+  description: ''
+  trigger:
+  - platform: template
+    value_template: '{{ (state_attr(''climate.calefaccion_xavi'', ''hvac_action'')
+      != ''heating'') and (is_state(''input_select.actuador_calefaccion'', ''Calefactor
+      + radiadores'')) }}'
+  - platform: state
+    entity_id: input_select.actuador_calefaccion
+    from: Calefactor + radiadores
+    to: Sólo radiadores
+  condition:
+  - condition: state
+    entity_id: switch.bf91bc89d028ab1df6qxgi
+    state: 'on'
+  action:
+  - type: turn_off
+    device_id: 6c28acef28b2e88091d9d9a48bbdb14a
+    entity_id: switch.bf91bc89d028ab1df6qxgi
+    domain: switch
+  mode: single
+- id: '1616190913652'
+  alias: Testing mobile notifications
+  description: ''
+  trigger:
+  - platform: time
+    at: 0:0:0
+  condition: []
+  action:
+  - service: notify.mobile_app_manu_a41
+    data:
+      title: This is a title
+      message: This is the message
+      data:
+        color: yellow
+        clickAction: /lovelace/default_view
+        subject: Less important text but very long
+  mode: single

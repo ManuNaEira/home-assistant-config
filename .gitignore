@@ -1,0 +1,21 @@
+# Generic file ignores: databases, binaries, etc
+*.log
+*.db
+*.db-shm
+*.db-wal
+*.pyc
+._*
+__pycache__
+
+# Ignore folders.
+config/.storage
+config/.cloud
+config/deps
+config/tts
+.vscode/
+
+# Ensure these YAML files are ignored, otherwise your secret data/credentials
+# will leak.
+**/ip_bans.yaml
+**/secrets.yaml
+**/known_devices.yaml

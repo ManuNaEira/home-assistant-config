@@ -1,0 +1,559 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+climate:
+  - platform: generic_thermostat
+    name: calefaccion_xavi
+    heater: switch.sonoff_4ch_relay_1
+    # Sensor en habitación Xavi
+    target_sensor: sensor.8910a7_temperature
+    min_temp: 17
+    max_temp: 22
+    ac_mode: false
+    target_temp: 19
+    cold_tolerance: 0.3
+    hot_tolerance: 0.1
+    min_cycle_duration:
+      minutes: 10
+    initial_hvac_mode: "heat"
+    away_temp: 18
+    precision: 0.1
+
+camera:
+  - platform: generic
+    name: Meteogalicia Aguete
+    still_image_url: https://servizos.meteogalicia.gal/datosred/infoweb/clima/webcams/Aguete2/ultima.jpg
+  - platform: generic
+    name: Meteogalicia Castrove
+    still_image_url: https://servizos.meteogalicia.gal/datosred/infoweb/clima/webcams/Castrove/ultima.jpg
+  - platform: generic
+    name: DGT AP-9 PK130C
+    still_image_url: http://infocar.dgt.es/etraffic/data/camaras/1272.jpg
+
+sensor:
+  - platform: rest
+    # MeteoGalicia id estaciones: https://servizos.meteogalicia.gal/rss/observacion/listaEstacionsMeteo.action
+    # "Pontevedra-Campolongo" = 10156
+    resource: https://servizos.meteogalicia.gal/rss/observacion/estadoEstacionsMeteo.action?idEst=10156
+    value_template: '{{ value_json.listEstadoActual[0].valorTemperatura }}'
+    name: Temperatura exterior
+    device_class: temperature
+    unit_of_measurement: '°C'
+    # Poll the api every 10 minutes
+    scan_interval: 600
+    # Add sensor attributes
+    json_attributes_path: "$.listEstadoActual[0]"
+    json_attributes:
+      - "estacion"
+      - "dataLocal"
+      - "valorSensTermica"
+
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'date_time_utc'
+      - 'date_time_iso'
+      - 'time_date'
+      - 'time_utc'
+      - 'beat'
+
+  - platform: template
+    sensors:
+      tariff_period:
+        friendly_name: "Periodo tarifa elec."
+        value_template: >-
+          {% set utc_now = states('sensor.time_utc') %}
+          {% if '11:00' < utc_now < '21:00' %}
+          PUNTA
+          {% else %}
+          VALLE
+          {% endif %}
+        icon_template: >-
+          {% set utc_now = states('sensor.time_utc') %}
+          {% if '11:00' < utc_now < '21:00' %}
+          mdi:weather-sunny-alert
+          {% else %}
+          mdi:weather-night
+          {% endif %}
+  # Sensor for the Meteogalicia ICA (Índice de calidade do aire)
+  - platform: rest
+    # Note the idEstacion=17 corresponds to the Pontevedra Campolongo station
+    resource: https://servizos.meteogalicia.gal/rss/caire/jsonDatosCaire.action?idEstacion=17
+    name: rest_ica
+    # For this sensor, we just get the name of the station. The real sensors for
+    # the different polluters come below as template sensors.
+    value_template: '{{ value_json.datosHorarios[0].estacion }}'
+    # Poll the api every hour
+    scan_interval: 3600
+    # Add sensor attributes. In the attributes we store de list of polluters
+    # dictionaries.
+    json_attributes_path: "$.datosHorarios[0]"
+    json_attributes:
+      - "datos"
+  # Pollutant sensors, created from the attributes of the REST API rest_ica
+  # above
+  - platform: template
+    sensors:
+      so2_exterior:
+        friendly_name: "SO2 exterior"
+        value_template: >-
+          {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+            {% if dict.parametro == 'SO2' %}
+              {% if (dict.flag == 'T') or (dict.flag == 'V') %}
+                {{ dict.valor|float }}
+              {% else %}
+                -1
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        unit_of_measurement: 'µg/m³'
+        attribute_templates:
+          parametro: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'SO2' %}
+                {{ "Dióxido de azufre" }}
+              {% endif %}
+            {% endfor %}
+          flag: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'SO2' %}
+                {% if dict.flag == 'T' %}
+                  Temporal
+                {% elif dict.flag == 'V' %}
+                  Válido      
+                {% else %}
+                  No válido
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          data: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'SO2' %}
+                {{ dict.data }}
+              {% endif %}
+            {% endfor %}
+          hora: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'SO2' %}
+                {{ dict.hora }}
+              {% endif %}
+            {% endfor %}
+        icon_template: >-
+          {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+            {% if dict.parametro == 'SO2' %}
+              {% set value = dict.valor %}
+              {% if (value >= 0) and (value < 100) %}
+              mdi:emoticon-excited-outline
+              {% elif (value >= 100) and (value < 200) %}
+              mdi:emoticon-happy-outline
+              {% elif (value >= 200) and (value < 350) %}
+              mdi:emoticon-neutral-outline
+              {% elif (value >= 350) and (value < 500) %}
+              mdi:emoticon-sad-outline
+              {% elif (value >= 500) and (value < 750) %}
+              mdi:emoticon-cry-outline
+              {% elif (value >= 750) %}
+              mdi:emoticon-sick-outline
+              {% else %}
+              mdi:help-circle-outline
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+      pm10_exterior:
+        friendly_name: "PM10 exterior"
+        value_template: >-
+          {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+            {% if dict.parametro == 'PM10' %}
+              {% if (dict.flag == 'T') or (dict.flag == 'V') %}
+                {{ dict.valor|float }}
+              {% else %}
+                -1
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        unit_of_measurement: 'µg/m³'
+        attribute_templates:
+          parametro: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'PM10' %}
+                {{ "Partículas suspensión menores 10um diámetro" }}
+              {% endif %}
+            {% endfor %}
+          flag: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'PM10' %}
+                {% if dict.flag == 'T' %}
+                  Temporal
+                {% elif dict.flag == 'V' %}
+                  Válido      
+                {% else %}
+                  No válido
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          data: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'PM10' %}
+                {{ dict.data }}
+              {% endif %}
+            {% endfor %}
+          hora: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'PM10' %}
+                {{ dict.hora }}
+              {% endif %}
+            {% endfor %}
+        icon_template: >-
+          {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+            {% if dict.parametro == 'PM10' %}
+              {% set value = dict.valor %}
+              {% if (value >= 0) and (value < 20) %}
+              mdi:emoticon-excited-outline
+              {% elif (value >= 20) and (value < 40) %}
+              mdi:emoticon-happy-outline
+              {% elif (value >= 40) and (value < 50) %}
+              mdi:emoticon-neutral-outline
+              {% elif (value >= 50) and (value < 100) %}
+              mdi:emoticon-sad-outline
+              {% elif (value >= 100) and (value < 150) %}
+              mdi:emoticon-cry-outline
+              {% elif (value >= 150) %}
+              mdi:emoticon-sick-outline
+              {% else %}
+              mdi:help-circle-outline
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+      pm25_exterior:
+        friendly_name: "PM25 exterior"
+        value_template: >-
+          {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+            {% if dict.parametro == 'PM25' %}
+              {% if (dict.flag == 'T') or (dict.flag == 'V') %}
+                {{ dict.valor|float }}
+              {% else %}
+                -1
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        unit_of_measurement: 'µg/m³'
+        attribute_templates:
+          parametro: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'PM25' %}
+                {{ "Partículas suspensión menores 2.5um diámetro" }}
+              {% endif %}
+            {% endfor %}
+          flag: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'PM25' %}
+                {% if dict.flag == 'T' %}
+                  Temporal
+                {% elif dict.flag == 'V' %}
+                  Válido
+                {% else %}
+                  No válido
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          data: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'PM25' %}
+                {{ dict.data }}
+              {% endif %}
+            {% endfor %}
+          hora: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'PM25' %}
+                {{ dict.hora }}
+              {% endif %}
+            {% endfor %}
+        icon_template: >-
+          {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+            {% if dict.parametro == 'PM25' %}
+              {% set value = dict.valor %}
+              {% if (value >= 0) and (value < 10) %}
+              mdi:emoticon-excited-outline
+              {% elif (value >= 10) and (value < 20) %}
+              mdi:emoticon-happy-outline
+              {% elif (value >= 20) and (value < 25) %}
+              mdi:emoticon-neutral-outline
+              {% elif (value >= 25) and (value < 50) %}
+              mdi:emoticon-sad-outline
+              {% elif (value >= 50) and (value < 75) %}
+              mdi:emoticon-cry-outline
+              {% elif (value >= 75) %}
+              mdi:emoticon-sick-outline
+              {% else %}
+              mdi:help-circle-outline
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+      co_exterior:
+        friendly_name: "CO exterior"
+        value_template: >-
+          {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+            {% if dict.parametro == 'CO' %}
+              {% if (dict.flag == 'T') or (dict.flag == 'V') %}
+                {{ dict.valor|float }}
+              {% else %}
+                -1
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        unit_of_measurement: 'mg/m³'
+        attribute_templates:
+          parametro: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'CO' %}
+                {{ "Monóxido de carbono" }}
+              {% endif %}
+            {% endfor %}
+          flag: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'CO' %}
+                {% if dict.flag == 'T' %}
+                  Temporal
+                {% elif dict.flag == 'V' %}
+                  Válido
+                {% else %}
+                  No válido
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          data: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'CO' %}
+                {{ dict.data }}
+              {% endif %}
+            {% endfor %}
+          hora: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'CO' %}
+                {{ dict.hora }}
+              {% endif %}
+            {% endfor %}
+        icon_template: >-
+          {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+            {% if dict.parametro == 'CO' %}
+              {% set value = dict.valor %}
+              {% if (value >= 0) and (value < 10) %}
+              mdi:emoticon-excited-outline
+              {% elif (value >= 10) %}
+              mdi:emoticon-sick-outline
+              {% else %}
+              mdi:help-circle-outline
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+      no_exterior:
+        friendly_name: "NO exterior"
+        value_template: >-
+          {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+            {% if dict.parametro == 'NO' %}
+              {% if (dict.flag == 'T') or (dict.flag == 'V') %}
+                {{ dict.valor|float }}
+              {% else %}
+                -1
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        unit_of_measurement: 'µg/m³'
+        attribute_templates:
+          parametro: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'NO' %}
+                {{ "Óxido nítrico" }}
+              {% endif %}
+            {% endfor %}
+          flag: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'NO' %}
+                {% if dict.flag == 'T' %}
+                  Temporal
+                {% elif dict.flag == 'V' %}
+                  Válido
+                {% else %}
+                  No válido
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          data: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'NO' %}
+                {{ dict.data }}
+              {% endif %}
+            {% endfor %}
+          hora: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'NO' %}
+                {{ dict.hora }}
+              {% endif %}
+            {% endfor %}
+        icon_template: >-
+          {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+            {% if dict.parametro == 'NO' %}
+              {% set value = dict.valor %}
+              {% if (value >= 0) and (value < 30) %}
+              mdi:emoticon-excited-outline
+              {% elif (value >= 30) %}
+              mdi:emoticon-sick-outline
+              {% else %}
+              mdi:help-circle-outline
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+      no2_exterior:
+        friendly_name: "NO2 exterior"
+        value_template: >-
+          {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+            {% if dict.parametro == 'NO2' %}
+              {% if (dict.flag == 'T') or (dict.flag == 'V') %}
+                {{ dict.valor|float }}
+              {% else %}
+                -1
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        unit_of_measurement: 'µg/m³'
+        attribute_templates:
+          parametro: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'NO2' %}
+                {{ "Dióxido de nitrógeno" }}
+              {% endif %}
+            {% endfor %}
+          flag: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'NO2' %}
+                {% if dict.flag == 'T' %}
+                  Temporal
+                {% elif dict.flag == 'V' %}
+                  Válido
+                {% else %}
+                  No válido
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          data: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'NO2' %}
+                {{ dict.data }}
+              {% endif %}
+            {% endfor %}
+          hora: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'NO2' %}
+                {{ dict.hora }}
+              {% endif %}
+            {% endfor %}
+        icon_template: >-
+          {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+            {% if dict.parametro == 'NO2' %}
+              {% set value = dict.valor %}
+              {% if (value >= 0) and (value < 40) %}
+              mdi:emoticon-excited-outline
+              {% elif (value >= 40) and (value < 90) %}
+              mdi:emoticon-happy-outline
+              {% elif (value >= 90) and (value < 120) %}
+              mdi:emoticon-neutral-outline
+              {% elif (value >= 120) and (value < 230) %}
+              mdi:emoticon-sad-outline
+              {% elif (value >= 230) and (value < 340) %}
+              mdi:emoticon-cry-outline
+              {% elif (value >= 340) %}
+              mdi:emoticon-sick-outline
+              {% else %}
+              mdi:help-circle-outline
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+      o3_exterior:
+        friendly_name: "O3 exterior"
+        value_template: >-
+          {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+            {% if dict.parametro == 'O3' %}
+              {% if (dict.flag == 'T') or (dict.flag == 'V') %}
+                {{ dict.valor|float }}
+              {% else %}
+                -1
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        unit_of_measurement: 'µg/m³'
+        attribute_templates:
+          parametro: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'O3' %}
+                {{ "Ozono" }}
+              {% endif %}
+            {% endfor %}
+          flag: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'O3' %}
+                {% if dict.flag == 'T' %}
+                  Temporal
+                {% elif dict.flag == 'V' %}
+                  Válido
+                {% else %}
+                  No válido
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          data: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'O3' %}
+                {{ dict.data }}
+              {% endif %}
+            {% endfor %}
+          hora: >-
+            {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+              {% if dict.parametro == 'O3' %}
+                {{ dict.hora }}
+              {% endif %}
+            {% endfor %}
+        icon_template: >-
+          {% for dict in state_attr('sensor.rest_ica', 'datos') %}
+            {% if dict.parametro == 'O3' %}
+              {% set value = dict.valor %}
+              {% if (value >= 0) and (value < 50) %}
+              mdi:emoticon-excited-outline
+              {% elif (value >= 50) and (value < 100) %}
+              mdi:emoticon-happy-outline
+              {% elif (value >= 100) and (value < 130) %}
+              mdi:emoticon-neutral-outline
+              {% elif (value >= 130) and (value < 240) %}
+              mdi:emoticon-sad-outline
+              {% elif (value >= 240) and (value < 380) %}
+              mdi:emoticon-cry-outline
+              {% elif (value >= 380) %}
+              mdi:emoticon-sick-outline
+              {% else %}
+              mdi:help-circle-outline
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+    # Raspberry pi CPU temperature sensor
+  - platform: command_line
+    name: CPU Temperature
+    command: "cat /sys/class/thermal/thermal_zone0/temp"
+    unit_of_measurement: "°C"
+    value_template: '{{ value | multiply(0.001) | round(1) }}'
+    # Raspberry pi CPU temperature sensor
+  - platform: command_line
+    name: GPU Temperature
+    command: "/opt/vc/bin/vcgencmd measure_temp"
+    unit_of_measurement: "°C"
+    value_template: '{{ value | replace("temp=", "") | replace("''C", "") }}'

@@ -1,0 +1,210 @@
+{
+    "version": 1,
+    "key": "lovelace",
+    "data": {
+        "config": {
+            "title": "Casa",
+            "views": [
+                {
+                    "path": "default_view",
+                    "title": "Home",
+                    "badges": [
+                        {
+                            "entity": "person.manu"
+                        },
+                        {
+                            "entity": "person.zaira"
+                        },
+                        {
+                            "entity": "sun.sun"
+                        },
+                        {
+                            "entity": "binary_sensor.rpi_power_status"
+                        },
+                        {
+                            "entity": "sensor.cpu_temperature"
+                        },
+                        {
+                            "entity": "sensor.gpu_temperature"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.temperatura_exterior",
+                                            "secondary_info": "last-updated",
+                                            "icon": "mdi:temperature-celsius"
+                                        },
+                                        {
+                                            "entity": "sensor.8910a7_temperature",
+                                            "name": "Hab. Xavi",
+                                            "secondary_info": "last-changed"
+                                        },
+                                        {
+                                            "entity": "sensor.9fb096_temperature",
+                                            "name": "Despacho",
+                                            "secondary_info": "last-changed"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Temperaturas",
+                                    "state_color": true
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_select.actuador_calefaccion"
+                                        },
+                                        {
+                                            "entity": "switch.sonoff_4ch_relay_1",
+                                            "secondary_info": "last-changed",
+                                            "name": "EV Rel\u00e9"
+                                        },
+                                        {
+                                            "entity": "switch.bf91bc89d028ab1df6qxgi",
+                                            "name": "Calefactor",
+                                            "secondary_info": "last-changed"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.sonoff_4ch_status",
+                                            "secondary_info": "last-changed"
+                                        }
+                                    ],
+                                    "title": "Actuador",
+                                    "show_header_toggle": false,
+                                    "state_color": true
+                                },
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.calefaccion_xavi",
+                                    "name": "Calefacci\u00f3n Xavi"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "switch.bff603553e0421e63danbz",
+                                    "name": "Switch"
+                                },
+                                {
+                                    "entity": "timer.deshumidificador_timer",
+                                    "name": "Timer OFF",
+                                    "secondary_info": "last-changed"
+                                }
+                            ],
+                            "title": "Deshumidificador"
+                        },
+                        {
+                            "type": "media-control",
+                            "entity": "media_player.tv_salon"
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "title": "Tarifa el\u00e9ctrica",
+                            "cards": [
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.pvpc",
+                                            "name": "Precio actual"
+                                        }
+                                    ],
+                                    "show_header_toggle": true
+                                },
+                                {
+                                    "type": "iframe",
+                                    "url": "https://www.esios.ree.es/es/insertado/termino-facturacion-energia-activa-pvpc",
+                                    "aspect_ratio": "100%"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Environment",
+                    "path": "environment",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "title": "Calidad del aire exterior",
+                            "cards": [
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.pm10_exterior"
+                                        },
+                                        {
+                                            "entity": "sensor.pm25_exterior"
+                                        },
+                                        {
+                                            "entity": "sensor.so2_exterior"
+                                        },
+                                        {
+                                            "entity": "sensor.co_exterior"
+                                        }
+                                    ],
+                                    "state_color": false
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.no2_exterior"
+                                        },
+                                        {
+                                            "entity": "sensor.no_exterior"
+                                        },
+                                        {
+                                            "entity": "sensor.o3_exterior"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "title": "C\u00e1maras",
+                            "cards": [
+                                {
+                                    "type": "picture-entity",
+                                    "entity": "camera.meteogalicia_castrove",
+                                    "show_state": false,
+                                    "hold_action": {
+                                        "action": "none"
+                                    }
+                                },
+                                {
+                                    "type": "picture-entity",
+                                    "entity": "camera.meteogalicia_aguete",
+                                    "show_state": false,
+                                    "hold_action": {
+                                        "action": "none"
+                                    }
+                                },
+                                {
+                                    "type": "picture-entity",
+                                    "entity": "camera.dgt_ap_9_pk130c",
+                                    "hold_action": {
+                                        "action": "none"
+                                    },
+                                    "show_state": false
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
