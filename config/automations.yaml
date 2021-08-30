@@ -104,3 +104,27 @@
         clickAction: /lovelace/default_view
         subject: Less important text but very long
   mode: single
+- id: '1629543867075'
+  alias: Deshumidificador arranque por tiempo
+  description: ''
+  trigger:
+  - platform: time
+    at: input_datetime.deshumidificador_tiempo_arranque
+  condition:
+  - condition: state
+    entity_id: input_boolean.deshumidificador_time_on_enabled
+    state: 'on'
+  action:
+  - type: turn_on
+    device_id: d81ed8560be6ee5d841b6d83ccac7982
+    entity_id: switch.bff603553e0421e63danbz
+    domain: switch
+  - service: timer.start
+    data:
+      duration: '0'
+    target:
+      entity_id: timer.deshumidificador_timer
+  - service: input_boolean.turn_off
+    target:
+      entity_id: input_boolean.deshumidificador_time_on_enabled
+  mode: single

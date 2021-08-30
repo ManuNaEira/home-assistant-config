@@ -1,0 +1,338 @@
+{
+    "version": 1,
+    "key": "core.device_registry",
+    "data": {
+        "devices": [
+            {
+                "config_entries": [
+                    "6377380771e287bb986761a699c14e21"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "met"
+                    ]
+                ],
+                "manufacturer": "Met.no",
+                "model": "Forecast",
+                "name": "Forecast",
+                "sw_version": null,
+                "entry_type": "service",
+                "id": "1672fed608b704c51c975c6650b20fb3",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "bf66955f018b625b1d27a5c0a32ad9fd"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "cast",
+                        "ca07ccf0bbd0c742eed626290c118af1"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "BeyondTV",
+                "name": "TV sal\u00f3n",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "2397b0a9fd625fd399fb2d6730afc440",
+                "via_device_id": null,
+                "area_id": "9d90d402918306e307d5fb1a6e94a120",
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "084b21b660b6e5b63db21dfb8a3b9069"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "tuya",
+                        "tuya.Ck23huM6BJFtOMlt"
+                    ]
+                ],
+                "manufacturer": "Smart Life",
+                "model": "scene",
+                "name": "Aviso consumo fuera de horario valle",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "58622728674364eee9d4f28dd72665e3",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "e5e683a9ec0cc666dac4a6ec57b62dda"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "f0:08:d1:d8:14:f4"
+                    ]
+                ],
+                "identifiers": [],
+                "manufacturer": "espressif",
+                "model": "WeMos D1 MINI ESP32",
+                "name": "temperatures_1",
+                "sw_version": "1.15.3 (Dec  7 2020, 01:56:36)",
+                "entry_type": null,
+                "id": "84cef9c56b436ff4d491f2dc63b7f538",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "bfe2a7f6e8e95140978e31b043e91b8c"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "c8:2b:96:43:51:30"
+                    ]
+                ],
+                "identifiers": [],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_ESP8285",
+                "name": "sonoff_4ch_pro_rev2",
+                "sw_version": "1.15.3 (Dec  2 2020, 16:59:26)",
+                "entry_type": null,
+                "id": "0f9097fda082116e0b060058d4ad928d",
+                "via_device_id": null,
+                "area_id": "9ec5ace85019b936abef1043f24f6d72",
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "f9a9fef0f71ace8c48192a97bb837430"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "61856f0e8123f987"
+                    ]
+                ],
+                "manufacturer": "samsung",
+                "model": "SM-A415F",
+                "name": "Manu A41",
+                "sw_version": "30",
+                "entry_type": null,
+                "id": "d4e50f8b34cd7a98c788cbf34f0402c6",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "b6663b7393893244e320efa4e3954879"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "7f3afa1ad3afe1da"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "Mi A2 Lite",
+                "name": "Zaira MI A2",
+                "sw_version": "29",
+                "entry_type": null,
+                "id": "4cb1c3dc6558de270e4be1fe0c33d0f3",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "084b21b660b6e5b63db21dfb8a3b9069"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "tuya",
+                        "tuya.bff603553e0421e63danbz"
+                    ]
+                ],
+                "manufacturer": "Smart Life",
+                "model": "switch",
+                "name": "Deshumidificador",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "d81ed8560be6ee5d841b6d83ccac7982",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "084b21b660b6e5b63db21dfb8a3b9069"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "tuya",
+                        "tuya.bf91bc89d028ab1df6qxgi"
+                    ]
+                ],
+                "manufacturer": "Smart Life",
+                "model": "switch",
+                "name": "\u00c1rbol Navidad",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "6c28acef28b2e88091d9d9a48bbdb14a",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "a0e6bc9c6d60d1ced8305c0cbd7cf953"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "hassio",
+                        "core_samba"
+                    ]
+                ],
+                "manufacturer": "Official add-ons",
+                "model": "Home Assistant Add-on",
+                "name": "Samba share",
+                "sw_version": "9.3.0",
+                "entry_type": "service",
+                "id": "7eafe19a2a96674bc2998a83c505b8d9",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "a0e6bc9c6d60d1ced8305c0cbd7cf953"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "hassio",
+                        "a0d7b954_esphome"
+                    ]
+                ],
+                "manufacturer": "Home Assistant Community Add-ons",
+                "model": "Home Assistant Add-on",
+                "name": "ESPHome",
+                "sw_version": "1.15.3",
+                "entry_type": "service",
+                "id": "e4f29f5b8aaac92d595a27eaa84d0e0a",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "a0e6bc9c6d60d1ced8305c0cbd7cf953"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "hassio",
+                        "core_configurator"
+                    ]
+                ],
+                "manufacturer": "Official add-ons",
+                "model": "Home Assistant Add-on",
+                "name": "File editor",
+                "sw_version": "5.2.0",
+                "entry_type": "service",
+                "id": "88bb5943840b3dd4cd96851b08c49b53",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "a0e6bc9c6d60d1ced8305c0cbd7cf953"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "hassio",
+                        "cebe7a76_hassio_google_drive_backup"
+                    ]
+                ],
+                "manufacturer": "Home Assistant Google Drive Backup Repository",
+                "model": "Home Assistant Add-on",
+                "name": "Home Assistant Google Drive Backup",
+                "sw_version": "0.103.1",
+                "entry_type": "service",
+                "id": "ec144df59217259a3831c17e2b0e9ad2",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "a0e6bc9c6d60d1ced8305c0cbd7cf953"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "hassio",
+                        "OS"
+                    ]
+                ],
+                "manufacturer": "Home Assistant",
+                "model": "Home Assistant Operating System",
+                "name": "Home Assistant Operating System",
+                "sw_version": "6.2",
+                "entry_type": "service",
+                "id": "d8a4e6084f663cf2c5471516648ed589",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "a0e6bc9c6d60d1ced8305c0cbd7cf953"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "hassio",
+                        "core_ssh"
+                    ]
+                ],
+                "manufacturer": "Official add-ons",
+                "model": "Home Assistant Add-on",
+                "name": "Terminal & SSH",
+                "sw_version": "9.1.3",
+                "entry_type": "service",
+                "id": "7342dedb71bb8a9a8200e2f528e8f677",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            }
+        ],
+        "deleted_devices": []
+    }
+}

@@ -95,12 +95,20 @@
                                     "name": "Switch"
                                 },
                                 {
+                                    "entity": "input_datetime.deshumidificador_tiempo_arranque"
+                                },
+                                {
+                                    "entity": "input_boolean.deshumidificador_time_on_enabled"
+                                },
+                                {
                                     "entity": "timer.deshumidificador_timer",
                                     "name": "Timer OFF",
                                     "secondary_info": "last-changed"
                                 }
                             ],
-                            "title": "Deshumidificador"
+                            "title": "Deshumidificador",
+                            "show_header_toggle": false,
+                            "state_color": true
                         },
                         {
                             "type": "media-control",
