@@ -302,7 +302,7 @@
                 "manufacturer": "Home Assistant",
                 "model": "Home Assistant Operating System",
                 "name": "Home Assistant Operating System",
-                "sw_version": "6.2",
+                "sw_version": "6.3",
                 "entry_type": "service",
                 "id": "d8a4e6084f663cf2c5471516648ed589",
                 "via_device_id": null,
