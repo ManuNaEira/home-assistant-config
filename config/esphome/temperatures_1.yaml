@@ -27,21 +27,25 @@ ota:
 esp32_ble_tracker:
 
 sensor:
-  - platform: xiaomi_lywsd03mmc
+  # Hab. Xavi
+  - platform: atc_mithermometer
     mac_address: "A4:C1:38:89:10:A7"
-    bindkey: "8f95f516dbe1bcd5dc7f6ed8c3067754"
     temperature:
-      name: "8910A7_Temperature"
+      name: "8910A7 Temperature"
     humidity:
-      name: "8910A7_Humidity"
+      name: "8910A7 Humidity"
     battery_level:
-      name: "8910A7_Battery_Level"
-  - platform: xiaomi_lywsd03mmc
+      name: "8910A7 Battery Level"
+    battery_voltage:
+      name: "8910A7 Battery Voltage"
+  # Despacho
+  - platform: atc_mithermometer
     mac_address: "A4:C1:38:9F:B0:96"
-    bindkey: "c4e1bfaa0b457f4a3ddc03fc6b0f0ecc"
     temperature:
-      name: "9FB096_Temperature"
+      name: "9FB096 Temperature"
     humidity:
-      name: "9FB096_Humidity"
+      name: "9FB096 Humidity"
     battery_level:
-      name: "9FB096_Battery Level"
+      name: "9FB096 Battery Level"
+    battery_voltage:
+      name: "9FB096 Battery Voltage"

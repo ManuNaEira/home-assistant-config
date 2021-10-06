@@ -82,7 +82,7 @@
                 "manufacturer": "espressif",
                 "model": "WeMos D1 MINI ESP32",
                 "name": "temperatures_1",
-                "sw_version": "1.15.3 (Dec  7 2020, 01:56:36)",
+                "sw_version": "2021.8.2 (Sep 14 2021, 22:50:59)",
                 "entry_type": null,
                 "id": "84cef9c56b436ff4d491f2dc63b7f538",
                 "via_device_id": null,
@@ -236,7 +236,7 @@
                 "manufacturer": "Home Assistant Community Add-ons",
                 "model": "Home Assistant Add-on",
                 "name": "ESPHome",
-                "sw_version": "1.15.3",
+                "sw_version": "2021.8.2",
                 "entry_type": "service",
                 "id": "e4f29f5b8aaac92d595a27eaa84d0e0a",
                 "via_device_id": null,
@@ -324,9 +324,31 @@
                 "manufacturer": "Official add-ons",
                 "model": "Home Assistant Add-on",
                 "name": "Terminal & SSH",
-                "sw_version": "9.1.3",
+                "sw_version": "9.2.1",
                 "entry_type": "service",
                 "id": "7342dedb71bb8a9a8200e2f528e8f677",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "3a7ed91983071ef525eca64d9850d4a4"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "7BAE5BB7-5FD1-48B6-9DC8-FB2BE6D92345"
+                    ]
+                ],
+                "manufacturer": "Apple",
+                "model": "iPhone11,8",
+                "name": "iPhone de Zaira",
+                "sw_version": "14.7.1",
+                "entry_type": null,
+                "id": "eddf97cb0e8e3e7d26b0c78db728ccab",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,

@@ -69,24 +69,6 @@ sensor:
       - 'time_utc'
       - 'beat'
 
-  - platform: template
-    sensors:
-      tariff_period:
-        friendly_name: "Periodo tarifa elec."
-        value_template: >-
-          {% set utc_now = states('sensor.time_utc') %}
-          {% if '11:00' < utc_now < '21:00' %}
-          PUNTA
-          {% else %}
-          VALLE
-          {% endif %}
-        icon_template: >-
-          {% set utc_now = states('sensor.time_utc') %}
-          {% if '11:00' < utc_now < '21:00' %}
-          mdi:weather-sunny-alert
-          {% else %}
-          mdi:weather-night
-          {% endif %}
   # Sensor for the Meteogalicia ICA (Índice de calidade do aire)
   - platform: rest
     # Note the idEstacion=17 corresponds to the Pontevedra Campolongo station
@@ -557,3 +539,25 @@ sensor:
     command: "/opt/vc/bin/vcgencmd measure_temp"
     unit_of_measurement: "°C"
     value_template: '{{ value | replace("temp=", "") | replace("''C", "") }}'
+
+template:
+  - sensor:
+    - name: "PVPC descriptive period"
+      state: >
+        {% set per = state_attr('sensor.pvpc', 'period') %}
+        {% if per == 'P1' %}
+        PUNTA
+        {% elif per == 'P2' %}
+        VALLE
+        {% else %}
+        SUPERVALLE
+        {% endif %}
+      icon: >
+        {% set per = state_attr('sensor.pvpc', 'period') %}
+        {% if per == 'P1' %}
+        mdi:brightness-5
+        {% elif per == 'P2' %}
+        mdi:brightness-6
+        {% else %}
+        mdi:brightness-3
+        {% endif %}

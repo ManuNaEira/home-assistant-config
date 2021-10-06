@@ -43,12 +43,12 @@
                                         {
                                             "entity": "sensor.8910a7_temperature",
                                             "name": "Hab. Xavi",
-                                            "secondary_info": "last-changed"
+                                            "secondary_info": "last-updated"
                                         },
                                         {
                                             "entity": "sensor.9fb096_temperature",
                                             "name": "Despacho",
-                                            "secondary_info": "last-changed"
+                                            "secondary_info": "last-updated"
                                         }
                                     ],
                                     "show_header_toggle": false,
@@ -124,6 +124,10 @@
                                         {
                                             "entity": "sensor.pvpc",
                                             "name": "Precio actual"
+                                        },
+                                        {
+                                            "entity": "sensor.pvpc_descriptive_period",
+                                            "name": "Periodo"
                                         }
                                     ],
                                     "show_header_toggle": true
