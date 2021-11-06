@@ -6,6 +6,9 @@ default_config:
 tts:
   - platform: google_translate
 
+# Enabling FFmpeg for camera connection and video/audio processing
+ffmpeg:
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml

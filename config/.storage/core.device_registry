@@ -48,28 +48,6 @@
             },
             {
                 "config_entries": [
-                    "084b21b660b6e5b63db21dfb8a3b9069"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "tuya",
-                        "tuya.Ck23huM6BJFtOMlt"
-                    ]
-                ],
-                "manufacturer": "Smart Life",
-                "model": "scene",
-                "name": "Aviso consumo fuera de horario valle",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "58622728674364eee9d4f28dd72665e3",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
                     "e5e683a9ec0cc666dac4a6ec57b62dda"
                 ],
                 "connections": [
@@ -129,72 +107,6 @@
                 "sw_version": "30",
                 "entry_type": null,
                 "id": "d4e50f8b34cd7a98c788cbf34f0402c6",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
-                    "b6663b7393893244e320efa4e3954879"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mobile_app",
-                        "7f3afa1ad3afe1da"
-                    ]
-                ],
-                "manufacturer": "Xiaomi",
-                "model": "Mi A2 Lite",
-                "name": "Zaira MI A2",
-                "sw_version": "29",
-                "entry_type": null,
-                "id": "4cb1c3dc6558de270e4be1fe0c33d0f3",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
-                    "084b21b660b6e5b63db21dfb8a3b9069"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "tuya",
-                        "tuya.bff603553e0421e63danbz"
-                    ]
-                ],
-                "manufacturer": "Smart Life",
-                "model": "switch",
-                "name": "Deshumidificador",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "d81ed8560be6ee5d841b6d83ccac7982",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
-                    "084b21b660b6e5b63db21dfb8a3b9069"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "tuya",
-                        "tuya.bf91bc89d028ab1df6qxgi"
-                    ]
-                ],
-                "manufacturer": "Smart Life",
-                "model": "switch",
-                "name": "\u00c1rbol Navidad",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "6c28acef28b2e88091d9d9a48bbdb14a",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,
@@ -302,7 +214,7 @@
                 "manufacturer": "Home Assistant",
                 "model": "Home Assistant Operating System",
                 "name": "Home Assistant Operating System",
-                "sw_version": "6.3",
+                "sw_version": "6.6",
                 "entry_type": "service",
                 "id": "d8a4e6084f663cf2c5471516648ed589",
                 "via_device_id": null,
@@ -346,15 +258,135 @@
                 "manufacturer": "Apple",
                 "model": "iPhone11,8",
                 "name": "iPhone de Zaira",
-                "sw_version": "14.7.1",
+                "sw_version": "14.8.1",
                 "entry_type": null,
                 "id": "eddf97cb0e8e3e7d26b0c78db728ccab",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,
                 "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "bb77ba2f89adb8223c744cc1a0578df0"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "b0:a7:b9:51:f6:09"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "onvif",
+                        "B0:A7:B9:51:F6:09"
+                    ]
+                ],
+                "manufacturer": "TP-Link",
+                "model": "C100",
+                "name": "test",
+                "sw_version": "1.1.14 Build 210825 Rel.46648n(4555)",
+                "entry_type": null,
+                "id": "3dd1e15979addb5d3d72a9882593e001",
+                "via_device_id": null,
+                "area_id": "dormitorio_gael",
+                "name_by_user": "Tapo C100 F609",
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "1cef854875aff497026cc5b6a0ef32d4"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "tuya",
+                        "bff603553e0421e63danbz"
+                    ]
+                ],
+                "manufacturer": "Tuya",
+                "model": "Smart socket",
+                "name": "Deshumidificador",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "dc7b934b9f295912877951b17d5914ff",
+                "via_device_id": null,
+                "area_id": "28c5950e30ea4ae3b8f0c6b8ff2c6c1f",
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "1cef854875aff497026cc5b6a0ef32d4"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "tuya",
+                        "bf91bc89d028ab1df6qxgi"
+                    ]
+                ],
+                "manufacturer": "Tuya",
+                "model": "Smart socket",
+                "name": "Calefactor",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "b55e42d5776fa47317de4c13efd2dfe3",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": "Calefactor",
+                "disabled_by": null
             }
         ],
-        "deleted_devices": []
+        "deleted_devices": [
+            {
+                "config_entries": [],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "7f3afa1ad3afe1da"
+                    ]
+                ],
+                "id": "4cb1c3dc6558de270e4be1fe0c33d0f3",
+                "orphaned_timestamp": 1633639961.8134565
+            },
+            {
+                "config_entries": [],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "tuya",
+                        "tuya.Ck23huM6BJFtOMlt"
+                    ]
+                ],
+                "id": "58622728674364eee9d4f28dd72665e3",
+                "orphaned_timestamp": 1635935921.3639295
+            },
+            {
+                "config_entries": [],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "tuya",
+                        "tuya.bff603553e0421e63danbz"
+                    ]
+                ],
+                "id": "d81ed8560be6ee5d841b6d83ccac7982",
+                "orphaned_timestamp": 1635935921.3639295
+            },
+            {
+                "config_entries": [],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "tuya",
+                        "tuya.bf91bc89d028ab1df6qxgi"
+                    ]
+                ],
+                "id": "6c28acef28b2e88091d9d9a48bbdb14a",
+                "orphaned_timestamp": 1635935921.3639295
+            }
+        ]
     }
 }

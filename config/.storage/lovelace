@@ -8,6 +8,7 @@
                 {
                     "path": "default_view",
                     "title": "Home",
+                    "icon": "mdi:home",
                     "badges": [
                         {
                             "entity": "person.manu"
@@ -144,6 +145,7 @@
                 {
                     "title": "Environment",
                     "path": "environment",
+                    "icon": "mdi:weather-partly-cloudy",
                     "badges": [],
                     "cards": [
                         {
@@ -213,6 +215,21 @@
                                     "show_state": false
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "title": "SECURITY",
+                    "path": "security",
+                    "icon": "mdi:cctv",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "picture-entity",
+                            "entity": "camera.tapo_c100_f609_mainstream",
+                            "show_state": false,
+                            "show_name": false,
+                            "camera_view": "live"
                         }
                     ]
                 }
