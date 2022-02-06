@@ -5,6 +5,8 @@ default_config:
 # Text to speech
 tts:
   - platform: google_translate
+    # Use Spanish as the default language
+    language: "es"
 
 # Enabling FFmpeg for camera connection and video/audio processing
 ffmpeg:
@@ -19,7 +21,9 @@ climate:
     name: calefaccion_xavi
     heater: switch.sonoff_4ch_relay_1
     # Sensor en habitación Xavi
-    target_sensor: sensor.8910a7_temperature
+    # target_sensor: sensor.8910a7_temperature
+    # Sensor despacho (temporal)
+    target_sensor: sensor.9fb096_temperature
     min_temp: 17
     max_temp: 22
     ac_mode: false

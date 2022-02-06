@@ -49,3 +49,22 @@ sensor:
       name: "9FB096 Battery Level"
     battery_voltage:
       name: "9FB096 Battery Voltage"
+  # Baño común
+  - platform: atc_mithermometer
+    mac_address: "A4:C1:38:88:39:3D"
+    temperature:
+      name: "88393D Temperature"
+      filters:
+        - delta: 0.1
+    humidity:
+      name: "88393D Humidity"
+      filters:
+        - delta: 3
+    battery_level:
+      name: "88393D Battery Level"
+      filters:
+        - delta: 2
+    battery_voltage:
+      name: "88393D Battery Voltage"
+      filters:
+        - delta: 0.1

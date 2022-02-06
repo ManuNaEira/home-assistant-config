@@ -22,7 +22,8 @@
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,
-                "disabled_by": null
+                "disabled_by": null,
+                "configuration_url": null
             },
             {
                 "config_entries": [
@@ -44,7 +45,8 @@
                 "via_device_id": null,
                 "area_id": "9d90d402918306e307d5fb1a6e94a120",
                 "name_by_user": null,
-                "disabled_by": null
+                "disabled_by": null,
+                "configuration_url": null
             },
             {
                 "config_entries": [
@@ -58,15 +60,16 @@
                 ],
                 "identifiers": [],
                 "manufacturer": "espressif",
-                "model": "WeMos D1 MINI ESP32",
+                "model": "wemos_d1_mini32",
                 "name": "temperatures_1",
-                "sw_version": "2021.8.2 (Sep 14 2021, 22:50:59)",
+                "sw_version": "2021.10.3 (Nov  7 2021, 18:29:10)",
                 "entry_type": null,
                 "id": "84cef9c56b436ff4d491f2dc63b7f538",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,
-                "disabled_by": null
+                "disabled_by": null,
+                "configuration_url": null
             },
             {
                 "config_entries": [
@@ -88,11 +91,12 @@
                 "via_device_id": null,
                 "area_id": "9ec5ace85019b936abef1043f24f6d72",
                 "name_by_user": null,
-                "disabled_by": null
+                "disabled_by": null,
+                "configuration_url": null
             },
             {
                 "config_entries": [
-                    "f9a9fef0f71ace8c48192a97bb837430"
+                    "9671af50c54a0c201f83256a2bf5930b"
                 ],
                 "connections": [],
                 "identifiers": [
@@ -103,14 +107,15 @@
                 ],
                 "manufacturer": "samsung",
                 "model": "SM-A415F",
-                "name": "Manu A41",
+                "name": "SM-A415F",
                 "sw_version": "30",
                 "entry_type": null,
                 "id": "d4e50f8b34cd7a98c788cbf34f0402c6",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,
-                "disabled_by": null
+                "disabled_by": null,
+                "configuration_url": null
             },
             {
                 "config_entries": [
@@ -126,13 +131,14 @@
                 "manufacturer": "Official add-ons",
                 "model": "Home Assistant Add-on",
                 "name": "Samba share",
-                "sw_version": "9.3.0",
+                "sw_version": "9.5.1",
                 "entry_type": "service",
                 "id": "7eafe19a2a96674bc2998a83c505b8d9",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,
-                "disabled_by": null
+                "disabled_by": null,
+                "configuration_url": "homeassistant://hassio/addon/core_samba"
             },
             {
                 "config_entries": [
@@ -148,13 +154,14 @@
                 "manufacturer": "Home Assistant Community Add-ons",
                 "model": "Home Assistant Add-on",
                 "name": "ESPHome",
-                "sw_version": "2021.8.2",
+                "sw_version": "2021.10.3",
                 "entry_type": "service",
                 "id": "e4f29f5b8aaac92d595a27eaa84d0e0a",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,
-                "disabled_by": null
+                "disabled_by": null,
+                "configuration_url": "homeassistant://hassio/addon/a0d7b954_esphome"
             },
             {
                 "config_entries": [
@@ -170,13 +177,14 @@
                 "manufacturer": "Official add-ons",
                 "model": "Home Assistant Add-on",
                 "name": "File editor",
-                "sw_version": "5.2.0",
+                "sw_version": "5.3.3",
                 "entry_type": "service",
                 "id": "88bb5943840b3dd4cd96851b08c49b53",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,
-                "disabled_by": null
+                "disabled_by": null,
+                "configuration_url": "homeassistant://hassio/addon/core_configurator"
             },
             {
                 "config_entries": [
@@ -192,13 +200,14 @@
                 "manufacturer": "Home Assistant Google Drive Backup Repository",
                 "model": "Home Assistant Add-on",
                 "name": "Home Assistant Google Drive Backup",
-                "sw_version": "0.103.1",
+                "sw_version": "0.105.2",
                 "entry_type": "service",
                 "id": "ec144df59217259a3831c17e2b0e9ad2",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,
-                "disabled_by": null
+                "disabled_by": null,
+                "configuration_url": "homeassistant://hassio/addon/cebe7a76_hassio_google_drive_backup"
             },
             {
                 "config_entries": [
@@ -214,13 +223,14 @@
                 "manufacturer": "Home Assistant",
                 "model": "Home Assistant Operating System",
                 "name": "Home Assistant Operating System",
-                "sw_version": "6.6",
+                "sw_version": "7.2",
                 "entry_type": "service",
                 "id": "d8a4e6084f663cf2c5471516648ed589",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,
-                "disabled_by": null
+                "disabled_by": null,
+                "configuration_url": null
             },
             {
                 "config_entries": [
@@ -236,13 +246,14 @@
                 "manufacturer": "Official add-ons",
                 "model": "Home Assistant Add-on",
                 "name": "Terminal & SSH",
-                "sw_version": "9.2.1",
+                "sw_version": "9.3.0",
                 "entry_type": "service",
                 "id": "7342dedb71bb8a9a8200e2f528e8f677",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,
-                "disabled_by": null
+                "disabled_by": null,
+                "configuration_url": "homeassistant://hassio/addon/core_ssh"
             },
             {
                 "config_entries": [
@@ -258,13 +269,14 @@
                 "manufacturer": "Apple",
                 "model": "iPhone11,8",
                 "name": "iPhone de Zaira",
-                "sw_version": "14.8.1",
+                "sw_version": "15.1",
                 "entry_type": null,
                 "id": "eddf97cb0e8e3e7d26b0c78db728ccab",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,
-                "disabled_by": null
+                "disabled_by": null,
+                "configuration_url": null
             },
             {
                 "config_entries": [
@@ -291,33 +303,12 @@
                 "via_device_id": null,
                 "area_id": "dormitorio_gael",
                 "name_by_user": "Tapo C100 F609",
-                "disabled_by": null
+                "disabled_by": null,
+                "configuration_url": null
             },
             {
                 "config_entries": [
-                    "1cef854875aff497026cc5b6a0ef32d4"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "tuya",
-                        "bff603553e0421e63danbz"
-                    ]
-                ],
-                "manufacturer": "Tuya",
-                "model": "Smart socket",
-                "name": "Deshumidificador",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "dc7b934b9f295912877951b17d5914ff",
-                "via_device_id": null,
-                "area_id": "28c5950e30ea4ae3b8f0c6b8ff2c6c1f",
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
-                    "1cef854875aff497026cc5b6a0ef32d4"
+                    "74c15ff5d0ed9341e4e0c8b0a7937934"
                 ],
                 "connections": [],
                 "identifiers": [
@@ -327,66 +318,41 @@
                     ]
                 ],
                 "manufacturer": "Tuya",
-                "model": "Smart socket",
+                "model": "Smart socket (vnya2spfopsh9lro)",
                 "name": "Calefactor",
                 "sw_version": null,
                 "entry_type": null,
                 "id": "b55e42d5776fa47317de4c13efd2dfe3",
                 "via_device_id": null,
-                "area_id": null,
-                "name_by_user": "Calefactor",
-                "disabled_by": null
+                "area_id": "dormitorio_gael",
+                "name_by_user": null,
+                "disabled_by": null,
+                "configuration_url": null
+            },
+            {
+                "config_entries": [
+                    "74c15ff5d0ed9341e4e0c8b0a7937934"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "tuya",
+                        "bff603553e0421e63danbz"
+                    ]
+                ],
+                "manufacturer": "Tuya",
+                "model": "Smart socket (vnya2spfopsh9lro)",
+                "name": "Deshumidificador",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "dc7b934b9f295912877951b17d5914ff",
+                "via_device_id": null,
+                "area_id": "28c5950e30ea4ae3b8f0c6b8ff2c6c1f",
+                "name_by_user": null,
+                "disabled_by": null,
+                "configuration_url": null
             }
         ],
-        "deleted_devices": [
-            {
-                "config_entries": [],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mobile_app",
-                        "7f3afa1ad3afe1da"
-                    ]
-                ],
-                "id": "4cb1c3dc6558de270e4be1fe0c33d0f3",
-                "orphaned_timestamp": 1633639961.8134565
-            },
-            {
-                "config_entries": [],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "tuya",
-                        "tuya.Ck23huM6BJFtOMlt"
-                    ]
-                ],
-                "id": "58622728674364eee9d4f28dd72665e3",
-                "orphaned_timestamp": 1635935921.3639295
-            },
-            {
-                "config_entries": [],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "tuya",
-                        "tuya.bff603553e0421e63danbz"
-                    ]
-                ],
-                "id": "d81ed8560be6ee5d841b6d83ccac7982",
-                "orphaned_timestamp": 1635935921.3639295
-            },
-            {
-                "config_entries": [],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "tuya",
-                        "tuya.bf91bc89d028ab1df6qxgi"
-                    ]
-                ],
-                "id": "6c28acef28b2e88091d9d9a48bbdb14a",
-                "orphaned_timestamp": 1635935921.3639295
-            }
-        ]
+        "deleted_devices": []
     }
 }

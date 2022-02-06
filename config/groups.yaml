@@ -1,0 +1,6 @@
+sensors_battery_levels:
+  name: Sensors battery levels
+  entities:
+    - sensor.8910a7_battery_level
+    - sensor.9fb096_battery_level
+    - sensor.88393d_battery_level

@@ -18,7 +18,8 @@
                 "device_class": "update",
                 "unit_of_measurement": null,
                 "original_name": "Updater",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "person.manu",
@@ -35,7 +36,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Manu",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "weather.casa",
@@ -52,7 +54,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Casa",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "weather.casa_hourly",
@@ -69,7 +72,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Casa Hourly",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "binary_sensor.rpi_power_status",
@@ -86,7 +90,8 @@
                 "device_class": "problem",
                 "unit_of_measurement": null,
                 "original_name": "RPi Power status",
-                "original_icon": "mdi:raspberry-pi"
+                "original_icon": "mdi:raspberry-pi",
+                "entity_category": null
             },
             {
                 "entity_id": "media_player.tv_salon",
@@ -103,7 +108,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "TV sal\u00f3n",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.8910a7_temperature",
@@ -112,7 +118,7 @@
                 "area_id": null,
                 "unique_id": "temperatures_1sensor8910a7_temperature",
                 "platform": "esphome",
-                "name": null,
+                "name": "Temperatura hab. Xavi",
                 "icon": null,
                 "disabled_by": null,
                 "capabilities": {
@@ -122,7 +128,8 @@
                 "device_class": "temperature",
                 "unit_of_measurement": "\u00b0C",
                 "original_name": "8910A7 Temperature",
-                "original_icon": "mdi:thermometer"
+                "original_icon": "mdi:thermometer",
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.8910a7_humidity",
@@ -131,7 +138,7 @@
                 "area_id": null,
                 "unique_id": "temperatures_1sensor8910a7_humidity",
                 "platform": "esphome",
-                "name": null,
+                "name": "HR hab. Xavi",
                 "icon": null,
                 "disabled_by": null,
                 "capabilities": {
@@ -141,7 +148,8 @@
                 "device_class": "humidity",
                 "unit_of_measurement": "%",
                 "original_name": "8910A7 Humidity",
-                "original_icon": "mdi:water-percent"
+                "original_icon": "mdi:water-percent",
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.8910a7_battery_level",
@@ -150,7 +158,7 @@
                 "area_id": null,
                 "unique_id": "temperatures_1sensor8910a7_battery_level",
                 "platform": "esphome",
-                "name": null,
+                "name": "Temp. hab. Xavi - nivel bater\u00eda",
                 "icon": null,
                 "disabled_by": null,
                 "capabilities": {
@@ -160,7 +168,8 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "8910A7 Battery Level",
-                "original_icon": "mdi:battery"
+                "original_icon": "mdi:battery",
+                "entity_category": null
             },
             {
                 "entity_id": "binary_sensor.sonoff_4ch_button_1",
@@ -177,7 +186,8 @@
                 "device_class": "",
                 "unit_of_measurement": null,
                 "original_name": "Sonoff 4CH Button 1",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "binary_sensor.sonoff_4ch_button_2",
@@ -194,7 +204,8 @@
                 "device_class": "",
                 "unit_of_measurement": null,
                 "original_name": "Sonoff 4CH Button 2",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "binary_sensor.sonoff_4ch_button_3",
@@ -211,7 +222,8 @@
                 "device_class": "",
                 "unit_of_measurement": null,
                 "original_name": "Sonoff 4CH Button 3",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "binary_sensor.sonoff_4ch_button_4",
@@ -228,7 +240,8 @@
                 "device_class": "",
                 "unit_of_measurement": null,
                 "original_name": "Sonoff 4CH Button 4",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "binary_sensor.sonoff_4ch_status",
@@ -245,7 +258,8 @@
                 "device_class": "connectivity",
                 "unit_of_measurement": null,
                 "original_name": "Sonoff 4CH Status",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "switch.sonoff_4ch_relay_1",
@@ -262,7 +276,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Sonoff 4CH Relay 1",
-                "original_icon": ""
+                "original_icon": "",
+                "entity_category": null
             },
             {
                 "entity_id": "switch.sonoff_4ch_relay_2",
@@ -279,7 +294,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Sonoff 4CH Relay 2",
-                "original_icon": ""
+                "original_icon": "",
+                "entity_category": null
             },
             {
                 "entity_id": "switch.sonoff_4ch_relay_3",
@@ -296,7 +312,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Sonoff 4CH Relay 3",
-                "original_icon": ""
+                "original_icon": "",
+                "entity_category": null
             },
             {
                 "entity_id": "switch.sonoff_4ch_relay_4",
@@ -313,7 +330,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Sonoff 4CH Relay 4",
-                "original_icon": ""
+                "original_icon": "",
+                "entity_category": null
             },
             {
                 "entity_id": "light.sonoff_4ch_blue_led",
@@ -334,7 +352,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Sonoff 4CH Blue LED",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "automation.arbol_de_navidad_show",
@@ -351,7 +370,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "\u00c1rbol de Navidad Show",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "automation.apagar_arbol_navidad",
@@ -368,7 +388,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Apagar \u00e1rbol Navidad",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.9fb096_temperature",
@@ -377,7 +398,7 @@
                 "area_id": null,
                 "unique_id": "temperatures_1sensor9fb096_temperature",
                 "platform": "esphome",
-                "name": null,
+                "name": "Temperatura despacho",
                 "icon": null,
                 "disabled_by": null,
                 "capabilities": {
@@ -387,7 +408,8 @@
                 "device_class": "temperature",
                 "unit_of_measurement": "\u00b0C",
                 "original_name": "9FB096 Temperature",
-                "original_icon": "mdi:thermometer"
+                "original_icon": "mdi:thermometer",
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.9fb096_humidity",
@@ -396,7 +418,7 @@
                 "area_id": null,
                 "unique_id": "temperatures_1sensor9fb096_humidity",
                 "platform": "esphome",
-                "name": null,
+                "name": "HR despacho",
                 "icon": null,
                 "disabled_by": null,
                 "capabilities": {
@@ -406,7 +428,8 @@
                 "device_class": "humidity",
                 "unit_of_measurement": "%",
                 "original_name": "9FB096 Humidity",
-                "original_icon": "mdi:water-percent"
+                "original_icon": "mdi:water-percent",
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.9fb096_battery_level",
@@ -415,7 +438,7 @@
                 "area_id": null,
                 "unique_id": "temperatures_1sensor9fb096_battery_level",
                 "platform": "esphome",
-                "name": null,
+                "name": "Temp. despacho - nivel bater\u00eda",
                 "icon": null,
                 "disabled_by": null,
                 "capabilities": {
@@ -425,7 +448,8 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "9FB096 Battery Level",
-                "original_icon": "mdi:battery"
+                "original_icon": "mdi:battery",
+                "entity_category": null
             },
             {
                 "entity_id": "timer.deshumidificador_timer",
@@ -442,7 +466,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Deshumidificador Timer",
-                "original_icon": "mdi:timer"
+                "original_icon": "mdi:timer",
+                "entity_category": null
             },
             {
                 "entity_id": "automation.apagar_deshumidificador_al_terminar_timer",
@@ -459,7 +484,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Apagar deshumidificador al terminar timer",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "input_select.actuador_calefaccion",
@@ -471,12 +497,18 @@
                 "name": null,
                 "icon": null,
                 "disabled_by": null,
-                "capabilities": {},
+                "capabilities": {
+                    "options": [
+                        "Calefactor + radiadores",
+                        "S\u00f3lo radiadores"
+                    ]
+                },
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Actuador Calefacci\u00f3n",
-                "original_icon": "mdi:radiator"
+                "original_icon": "mdi:radiator",
+                "entity_category": null
             },
             {
                 "entity_id": "automation.encender_calefactor_con_calefaccion",
@@ -493,7 +525,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Encender calefactor con calefacci\u00f3n",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "automation.apagar_calefactor_con_calefaccion",
@@ -510,11 +543,12 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Apagar calefactor con calefacci\u00f3n",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "device_tracker.manu_a41",
-                "config_entry_id": "f9a9fef0f71ace8c48192a97bb837430",
+                "config_entry_id": "9671af50c54a0c201f83256a2bf5930b",
                 "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
                 "area_id": null,
                 "unique_id": "61856f0e8123f987",
@@ -526,93 +560,9 @@
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
-                "original_name": "Manu A41",
-                "original_icon": null
-            },
-            {
-                "entity_id": "sensor.manu_a41_nivel_de_la_bateria",
-                "config_entry_id": "f9a9fef0f71ace8c48192a97bb837430",
-                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
-                "area_id": null,
-                "unique_id": "0da4e8259700fd5d7154a091c74d53ce7d67ba5539654e7c574e47659e363b3e_battery_level",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": "battery",
-                "unit_of_measurement": "%",
-                "original_name": "Manu A41 Nivel de la bater\u00eda",
-                "original_icon": "mdi:battery-90"
-            },
-            {
-                "entity_id": "sensor.manu_a41_estado_de_la_bateria",
-                "config_entry_id": "f9a9fef0f71ace8c48192a97bb837430",
-                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
-                "area_id": null,
-                "unique_id": "0da4e8259700fd5d7154a091c74d53ce7d67ba5539654e7c574e47659e363b3e_battery_state",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Manu A41 Estado de la bater\u00eda",
-                "original_icon": "mdi:battery-minus"
-            },
-            {
-                "entity_id": "binary_sensor.manu_a41_esta_cargando",
-                "config_entry_id": "f9a9fef0f71ace8c48192a97bb837430",
-                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
-                "area_id": null,
-                "unique_id": "0da4e8259700fd5d7154a091c74d53ce7d67ba5539654e7c574e47659e363b3e_is_charging",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": "plug",
-                "unit_of_measurement": null,
-                "original_name": "Manu A41 Est\u00e1 cargando",
-                "original_icon": "mdi:power-plug-off"
-            },
-            {
-                "entity_id": "sensor.manu_a41_tipo_de_cargador",
-                "config_entry_id": "f9a9fef0f71ace8c48192a97bb837430",
-                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
-                "area_id": null,
-                "unique_id": "0da4e8259700fd5d7154a091c74d53ce7d67ba5539654e7c574e47659e363b3e_charger_type",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Manu A41 Tipo de cargador",
-                "original_icon": "mdi:battery"
-            },
-            {
-                "entity_id": "sensor.manu_a41_salud_de_la_bateria",
-                "config_entry_id": "f9a9fef0f71ace8c48192a97bb837430",
-                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
-                "area_id": null,
-                "unique_id": "0da4e8259700fd5d7154a091c74d53ce7d67ba5539654e7c574e47659e363b3e_battery_health",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Manu A41 Salud de la bater\u00eda",
-                "original_icon": "mdi:battery-heart-variant"
+                "original_name": "SM-A415F",
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "binary_sensor.remote_ui",
@@ -629,7 +579,8 @@
                 "device_class": "connectivity",
                 "unit_of_measurement": null,
                 "original_name": "Remote UI",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": "diagnostic"
             },
             {
                 "entity_id": "person.zaira",
@@ -646,7 +597,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Zaira",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "zone.trabajo_zaira",
@@ -663,7 +615,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Trabajo Zaira",
-                "original_icon": "mdi:hospital-box-outline"
+                "original_icon": "mdi:hospital-box-outline",
+                "entity_category": null
             },
             {
                 "entity_id": "zone.ctag",
@@ -680,7 +633,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "CTAG",
-                "original_icon": "mdi:briefcase"
+                "original_icon": "mdi:briefcase",
+                "entity_category": null
             },
             {
                 "entity_id": "zone.calvos",
@@ -697,7 +651,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Calvos",
-                "original_icon": "mdi:map-marker"
+                "original_icon": "mdi:map-marker",
+                "entity_category": null
             },
             {
                 "entity_id": "automation.testing_mobile_notifications",
@@ -714,7 +669,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Testing mobile notifications",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "binary_sensor.samba_share_update_available",
@@ -731,7 +687,8 @@
                 "device_class": "update",
                 "unit_of_measurement": null,
                 "original_name": "Samba share: Update Available",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "binary_sensor.esphome_update_available",
@@ -748,7 +705,8 @@
                 "device_class": "update",
                 "unit_of_measurement": null,
                 "original_name": "ESPHome: Update Available",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "binary_sensor.file_editor_update_available",
@@ -765,7 +723,8 @@
                 "device_class": "update",
                 "unit_of_measurement": null,
                 "original_name": "File editor: Update Available",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "binary_sensor.home_assistant_google_drive_backup_update_available",
@@ -782,7 +741,8 @@
                 "device_class": "update",
                 "unit_of_measurement": null,
                 "original_name": "Home Assistant Google Drive Backup: Update Available",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "binary_sensor.home_assistant_operating_system_update_available",
@@ -799,7 +759,8 @@
                 "device_class": "update",
                 "unit_of_measurement": null,
                 "original_name": "Home Assistant Operating System: Update Available",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.samba_share_version",
@@ -816,7 +777,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Samba share: Version",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.esphome_version",
@@ -833,7 +795,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "ESPHome: Version",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.file_editor_version",
@@ -850,7 +813,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "File editor: Version",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.home_assistant_google_drive_backup_version",
@@ -867,7 +831,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Home Assistant Google Drive Backup: Version",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.home_assistant_operating_system_version",
@@ -884,7 +849,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Home Assistant Operating System: Version",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.samba_share_newest_version",
@@ -901,7 +867,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Samba share: Newest Version",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.esphome_newest_version",
@@ -918,7 +885,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "ESPHome: Newest Version",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.file_editor_newest_version",
@@ -935,7 +903,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "File editor: Newest Version",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.home_assistant_google_drive_backup_newest_version",
@@ -952,7 +921,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Home Assistant Google Drive Backup: Newest Version",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.home_assistant_operating_system_newest_version",
@@ -969,92 +939,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Home Assistant Operating System: Newest Version",
-                "original_icon": null
-            },
-            {
-                "entity_id": "sensor.manu_a41_battery_temperature",
-                "config_entry_id": "f9a9fef0f71ace8c48192a97bb837430",
-                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
-                "area_id": null,
-                "unique_id": "0da4e8259700fd5d7154a091c74d53ce7d67ba5539654e7c574e47659e363b3e_battery_temperature",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": "temperature",
-                "unit_of_measurement": "\u00b0C",
-                "original_name": "Manu A41 Battery Temperature",
-                "original_icon": "mdi:battery"
-            },
-            {
-                "entity_id": "sensor.manu_a41_confianza_en_el_sueno",
-                "config_entry_id": "f9a9fef0f71ace8c48192a97bb837430",
-                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
-                "area_id": null,
-                "unique_id": "0da4e8259700fd5d7154a091c74d53ce7d67ba5539654e7c574e47659e363b3e_sleep_confidence",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": "%",
-                "original_name": "Manu A41 Confianza en el sue\u00f1o",
-                "original_icon": "mdi:sleep"
-            },
-            {
-                "entity_id": "sensor.manu_a41_sensor_de_no_molestar",
-                "config_entry_id": "f9a9fef0f71ace8c48192a97bb837430",
-                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
-                "area_id": null,
-                "unique_id": "0da4e8259700fd5d7154a091c74d53ce7d67ba5539654e7c574e47659e363b3e_dnd_sensor",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Manu A41 Sensor de no molestar",
-                "original_icon": "mdi:do-not-disturb"
-            },
-            {
-                "entity_id": "sensor.manu_a41_bssid_wifi",
-                "config_entry_id": "f9a9fef0f71ace8c48192a97bb837430",
-                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
-                "area_id": null,
-                "unique_id": "0da4e8259700fd5d7154a091c74d53ce7d67ba5539654e7c574e47659e363b3e_wifi_bssid",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Manu A41 BSSID Wifi",
-                "original_icon": "mdi:wifi"
-            },
-            {
-                "entity_id": "sensor.manu_a41_segmento_de_sueno",
-                "config_entry_id": "f9a9fef0f71ace8c48192a97bb837430",
-                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
-                "area_id": null,
-                "unique_id": "0da4e8259700fd5d7154a091c74d53ce7d67ba5539654e7c574e47659e363b3e_sleep_segment",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": "ms",
-                "original_name": "Manu A41 Segmento de sue\u00f1o",
-                "original_icon": "mdi:sleep"
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "binary_sensor.terminal_ssh_update_available",
@@ -1071,7 +957,8 @@
                 "device_class": "update",
                 "unit_of_measurement": null,
                 "original_name": "Terminal & SSH: Update Available",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.terminal_ssh_version",
@@ -1088,7 +975,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Terminal & SSH: Version",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.terminal_ssh_newest_version",
@@ -1105,7 +993,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Terminal & SSH: Newest Version",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "input_datetime.deshumidificador_tiempo_arranque",
@@ -1117,12 +1006,16 @@
                 "name": null,
                 "icon": null,
                 "disabled_by": null,
-                "capabilities": {},
+                "capabilities": {
+                    "has_date": false,
+                    "has_time": true
+                },
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Deshumidificador time ON",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "input_boolean.deshumidificador_time_on_enabled",
@@ -1139,7 +1032,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Deshumidificador time ON enabled",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "automation.deshumidificador_arranque_por_tiempo",
@@ -1156,7 +1050,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Deshumidificador arranque por tiempo",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.9fb096_battery_voltage",
@@ -1165,7 +1060,7 @@
                 "area_id": null,
                 "unique_id": "temperatures_1sensor9fb096_battery_voltage",
                 "platform": "esphome",
-                "name": null,
+                "name": "Temp. despacho - tensi\u00f3n bater\u00eda",
                 "icon": null,
                 "disabled_by": null,
                 "capabilities": {
@@ -1175,7 +1070,8 @@
                 "device_class": "voltage",
                 "unit_of_measurement": "V",
                 "original_name": "9FB096 Battery Voltage",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.8910a7_battery_voltage",
@@ -1184,7 +1080,7 @@
                 "area_id": null,
                 "unique_id": "temperatures_1sensor8910a7_battery_voltage",
                 "platform": "esphome",
-                "name": null,
+                "name": "Temp. hab. Xavi - tensi\u00f3n bater\u00eda",
                 "icon": null,
                 "disabled_by": null,
                 "capabilities": {
@@ -1194,7 +1090,8 @@
                 "device_class": "voltage",
                 "unit_of_measurement": "V",
                 "original_name": "8910A7 Battery Voltage",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "device_tracker.iphone_de_zaira",
@@ -1211,7 +1108,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "iPhone de Zaira",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.iphone_de_zaira_battery_level",
@@ -1228,7 +1126,8 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "iPhone de Zaira Battery Level",
-                "original_icon": "mdi:battery-10"
+                "original_icon": "mdi:battery-10",
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.iphone_de_zaira_battery_state",
@@ -1245,7 +1144,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "iPhone de Zaira Battery State",
-                "original_icon": "mdi:battery-10"
+                "original_icon": "mdi:battery-10",
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.iphone_de_zaira_storage",
@@ -1262,7 +1162,8 @@
                 "device_class": null,
                 "unit_of_measurement": "% available",
                 "original_name": "iPhone de Zaira Storage",
-                "original_icon": "mdi:database"
+                "original_icon": "mdi:database",
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.iphone_de_zaira_ssid",
@@ -1279,7 +1180,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "iPhone de Zaira SSID",
-                "original_icon": "mdi:wifi"
+                "original_icon": "mdi:wifi",
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.iphone_de_zaira_bssid",
@@ -1296,7 +1198,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "iPhone de Zaira BSSID",
-                "original_icon": "mdi:wifi-star"
+                "original_icon": "mdi:wifi-star",
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.iphone_de_zaira_sim_1",
@@ -1313,7 +1216,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "iPhone de Zaira SIM 1",
-                "original_icon": "mdi:sim"
+                "original_icon": "mdi:sim",
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.iphone_de_zaira_connection_type",
@@ -1330,7 +1234,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "iPhone de Zaira Connection Type",
-                "original_icon": "mdi:wifi"
+                "original_icon": "mdi:wifi",
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.iphone_de_zaira_geocoded_location",
@@ -1347,7 +1252,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "iPhone de Zaira Geocoded Location",
-                "original_icon": "mdi:map"
+                "original_icon": "mdi:map",
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.iphone_de_zaira_sim_2",
@@ -1364,7 +1270,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "iPhone de Zaira SIM 2",
-                "original_icon": "mdi:sim"
+                "original_icon": "mdi:sim",
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.iphone_de_zaira_last_update_trigger",
@@ -1381,7 +1288,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "iPhone de Zaira Last Update Trigger",
-                "original_icon": "mdi:cellphone-wireless"
+                "original_icon": "mdi:cellphone-wireless",
+                "entity_category": null
             },
             {
                 "entity_id": "camera.tapo_c100_f609_mainstream",
@@ -1398,7 +1306,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "test - mainStream",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "camera.tapo_c100_f609_minorstream",
@@ -1415,24 +1324,8 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "test - minorStream",
-                "original_icon": null
-            },
-            {
-                "entity_id": "switch.bff603553e0421e63danbz",
-                "config_entry_id": "1cef854875aff497026cc5b6a0ef32d4",
-                "device_id": "dc7b934b9f295912877951b17d5914ff",
-                "area_id": null,
-                "unique_id": "tuya.bff603553e0421e63danbz_1",
-                "platform": "tuya",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": null,
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Deshumidificador_1",
-                "original_icon": null
+                "original_icon": null,
+                "entity_category": null
             },
             {
                 "entity_id": "sensor.pvpc",
@@ -1451,24 +1344,768 @@
                 "device_class": null,
                 "unit_of_measurement": "\u20ac/kWh",
                 "original_name": "PVPC",
-                "original_icon": "mdi:currency-eur"
+                "original_icon": "mdi:currency-eur",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.88393d_temperature",
+                "config_entry_id": "e5e683a9ec0cc666dac4a6ec57b62dda",
+                "device_id": "84cef9c56b436ff4d491f2dc63b7f538",
+                "area_id": null,
+                "unique_id": "temperatures_1sensor88393d_temperature",
+                "platform": "esphome",
+                "name": "Temperatura ba\u00f1o com\u00fan",
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": "temperature",
+                "unit_of_measurement": "\u00b0C",
+                "original_name": "88393D Temperature",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.88393d_humidity",
+                "config_entry_id": "e5e683a9ec0cc666dac4a6ec57b62dda",
+                "device_id": "84cef9c56b436ff4d491f2dc63b7f538",
+                "area_id": null,
+                "unique_id": "temperatures_1sensor88393d_humidity",
+                "platform": "esphome",
+                "name": "HR ba\u00f1o com\u00fan",
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": "humidity",
+                "unit_of_measurement": "%",
+                "original_name": "88393D Humidity",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.88393d_battery_level",
+                "config_entry_id": "e5e683a9ec0cc666dac4a6ec57b62dda",
+                "device_id": "84cef9c56b436ff4d491f2dc63b7f538",
+                "area_id": null,
+                "unique_id": "temperatures_1sensor88393d_battery_level",
+                "platform": "esphome",
+                "name": "Temp. ba\u00f1o com\u00fan - nivel bater\u00eda",
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": "battery",
+                "unit_of_measurement": "%",
+                "original_name": "88393D Battery Level",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.88393d_battery_voltage",
+                "config_entry_id": "e5e683a9ec0cc666dac4a6ec57b62dda",
+                "device_id": "84cef9c56b436ff4d491f2dc63b7f538",
+                "area_id": null,
+                "unique_id": "temperatures_1sensor88393d_battery_voltage",
+                "platform": "esphome",
+                "name": "Temp. ba\u00f1o com\u00fan - tensi\u00f3n bater\u00eda",
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": "voltage",
+                "unit_of_measurement": "V",
+                "original_name": "88393D Battery Voltage",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.iphone_de_zaira_activity",
+                "config_entry_id": "3a7ed91983071ef525eca64d9850d4a4",
+                "device_id": "eddf97cb0e8e3e7d26b0c78db728ccab",
+                "area_id": null,
+                "unique_id": "9a5cb03ecbaf858393715cd3174fe6137f3bc3fa048207c65835489153d7f639_activity",
+                "platform": "mobile_app",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "iPhone de Zaira Activity",
+                "original_icon": "mdi:help-circle",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.iphone_de_zaira_distance",
+                "config_entry_id": "3a7ed91983071ef525eca64d9850d4a4",
+                "device_id": "eddf97cb0e8e3e7d26b0c78db728ccab",
+                "area_id": null,
+                "unique_id": "9a5cb03ecbaf858393715cd3174fe6137f3bc3fa048207c65835489153d7f639_pedometer_distance",
+                "platform": "mobile_app",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "m",
+                "original_name": "iPhone de Zaira Distance",
+                "original_icon": "mdi:hiking",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.iphone_de_zaira_floors_ascended",
+                "config_entry_id": "3a7ed91983071ef525eca64d9850d4a4",
+                "device_id": "eddf97cb0e8e3e7d26b0c78db728ccab",
+                "area_id": null,
+                "unique_id": "9a5cb03ecbaf858393715cd3174fe6137f3bc3fa048207c65835489153d7f639_pedometer_floors_ascended",
+                "platform": "mobile_app",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "floors",
+                "original_name": "iPhone de Zaira Floors Ascended",
+                "original_icon": "mdi:stairs-up",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.iphone_de_zaira_steps",
+                "config_entry_id": "3a7ed91983071ef525eca64d9850d4a4",
+                "device_id": "eddf97cb0e8e3e7d26b0c78db728ccab",
+                "area_id": null,
+                "unique_id": "9a5cb03ecbaf858393715cd3174fe6137f3bc3fa048207c65835489153d7f639_pedometer_steps",
+                "platform": "mobile_app",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "steps",
+                "original_name": "iPhone de Zaira Steps",
+                "original_icon": "mdi:walk",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.iphone_de_zaira_floors_descended",
+                "config_entry_id": "3a7ed91983071ef525eca64d9850d4a4",
+                "device_id": "eddf97cb0e8e3e7d26b0c78db728ccab",
+                "area_id": null,
+                "unique_id": "9a5cb03ecbaf858393715cd3174fe6137f3bc3fa048207c65835489153d7f639_pedometer_floors_descended",
+                "platform": "mobile_app",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "floors",
+                "original_name": "iPhone de Zaira Floors Descended",
+                "original_icon": "mdi:stairs-down",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.iphone_de_zaira_average_active_pace",
+                "config_entry_id": "3a7ed91983071ef525eca64d9850d4a4",
+                "device_id": "eddf97cb0e8e3e7d26b0c78db728ccab",
+                "area_id": null,
+                "unique_id": "9a5cb03ecbaf858393715cd3174fe6137f3bc3fa048207c65835489153d7f639_pedometer_avg_active_pace",
+                "platform": "mobile_app",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "m/s",
+                "original_name": "iPhone de Zaira Average Active Pace",
+                "original_icon": "mdi:speedometer",
+                "entity_category": null
             },
             {
                 "entity_id": "switch.bf91bc89d028ab1df6qxgi",
-                "config_entry_id": "1cef854875aff497026cc5b6a0ef32d4",
+                "config_entry_id": "74c15ff5d0ed9341e4e0c8b0a7937934",
                 "device_id": "b55e42d5776fa47317de4c13efd2dfe3",
                 "area_id": null,
-                "unique_id": "tuya.bf91bc89d028ab1df6qxgi_1",
+                "unique_id": "tuya.bf91bc89d028ab1df6qxgiswitch_1",
                 "platform": "tuya",
-                "name": "Calefactor",
+                "name": null,
+                "icon": "mdi:power-plug",
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": "outlet",
+                "unit_of_measurement": null,
+                "original_name": "Calefactor Socket 1",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "switch.bff603553e0421e63danbz",
+                "config_entry_id": "74c15ff5d0ed9341e4e0c8b0a7937934",
+                "device_id": "dc7b934b9f295912877951b17d5914ff",
+                "area_id": null,
+                "unique_id": "tuya.bff603553e0421e63danbzswitch_1",
+                "platform": "tuya",
+                "name": null,
+                "icon": "mdi:power-plug",
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": "outlet",
+                "unit_of_measurement": null,
+                "original_name": "Deshumidificador Socket 1",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "binary_sensor.samba_share_running",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "7eafe19a2a96674bc2998a83c505b8d9",
+                "area_id": null,
+                "unique_id": "core_samba_state",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": "running",
+                "unit_of_measurement": null,
+                "original_name": "Samba share: Running",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "binary_sensor.esphome_running",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "e4f29f5b8aaac92d595a27eaa84d0e0a",
+                "area_id": null,
+                "unique_id": "a0d7b954_esphome_state",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": "running",
+                "unit_of_measurement": null,
+                "original_name": "ESPHome: Running",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "binary_sensor.file_editor_running",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "88bb5943840b3dd4cd96851b08c49b53",
+                "area_id": null,
+                "unique_id": "core_configurator_state",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": "running",
+                "unit_of_measurement": null,
+                "original_name": "File editor: Running",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "binary_sensor.home_assistant_google_drive_backup_running",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "ec144df59217259a3831c17e2b0e9ad2",
+                "area_id": null,
+                "unique_id": "cebe7a76_hassio_google_drive_backup_state",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": "running",
+                "unit_of_measurement": null,
+                "original_name": "Home Assistant Google Drive Backup: Running",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "binary_sensor.terminal_ssh_running",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "7342dedb71bb8a9a8200e2f528e8f677",
+                "area_id": null,
+                "unique_id": "core_ssh_state",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": "running",
+                "unit_of_measurement": null,
+                "original_name": "Terminal & SSH: Running",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "binary_sensor.home_assistant_operating_system_running",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "d8a4e6084f663cf2c5471516648ed589",
+                "area_id": null,
+                "unique_id": "home_assistant_os_state",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": "running",
+                "unit_of_measurement": null,
+                "original_name": "Home Assistant Operating System: Running",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.samba_share_cpu_percent",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "7eafe19a2a96674bc2998a83c505b8d9",
+                "area_id": null,
+                "unique_id": "core_samba_cpu_percent",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "%",
+                "original_name": "Samba share: CPU Percent",
+                "original_icon": "mdi:cpu-64-bit",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.samba_share_memory_percent",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "7eafe19a2a96674bc2998a83c505b8d9",
+                "area_id": null,
+                "unique_id": "core_samba_memory_percent",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "%",
+                "original_name": "Samba share: Memory Percent",
+                "original_icon": "mdi:memory",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.esphome_cpu_percent",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "e4f29f5b8aaac92d595a27eaa84d0e0a",
+                "area_id": null,
+                "unique_id": "a0d7b954_esphome_cpu_percent",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "%",
+                "original_name": "ESPHome: CPU Percent",
+                "original_icon": "mdi:cpu-64-bit",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.esphome_memory_percent",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "e4f29f5b8aaac92d595a27eaa84d0e0a",
+                "area_id": null,
+                "unique_id": "a0d7b954_esphome_memory_percent",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "%",
+                "original_name": "ESPHome: Memory Percent",
+                "original_icon": "mdi:memory",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.file_editor_cpu_percent",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "88bb5943840b3dd4cd96851b08c49b53",
+                "area_id": null,
+                "unique_id": "core_configurator_cpu_percent",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "%",
+                "original_name": "File editor: CPU Percent",
+                "original_icon": "mdi:cpu-64-bit",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.file_editor_memory_percent",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "88bb5943840b3dd4cd96851b08c49b53",
+                "area_id": null,
+                "unique_id": "core_configurator_memory_percent",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "%",
+                "original_name": "File editor: Memory Percent",
+                "original_icon": "mdi:memory",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.home_assistant_google_drive_backup_cpu_percent",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "ec144df59217259a3831c17e2b0e9ad2",
+                "area_id": null,
+                "unique_id": "cebe7a76_hassio_google_drive_backup_cpu_percent",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "%",
+                "original_name": "Home Assistant Google Drive Backup: CPU Percent",
+                "original_icon": "mdi:cpu-64-bit",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.home_assistant_google_drive_backup_memory_percent",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "ec144df59217259a3831c17e2b0e9ad2",
+                "area_id": null,
+                "unique_id": "cebe7a76_hassio_google_drive_backup_memory_percent",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "%",
+                "original_name": "Home Assistant Google Drive Backup: Memory Percent",
+                "original_icon": "mdi:memory",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.terminal_ssh_cpu_percent",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "7342dedb71bb8a9a8200e2f528e8f677",
+                "area_id": null,
+                "unique_id": "core_ssh_cpu_percent",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "%",
+                "original_name": "Terminal & SSH: CPU Percent",
+                "original_icon": "mdi:cpu-64-bit",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.terminal_ssh_memory_percent",
+                "config_entry_id": "a0e6bc9c6d60d1ced8305c0cbd7cf953",
+                "device_id": "7342dedb71bb8a9a8200e2f528e8f677",
+                "area_id": null,
+                "unique_id": "core_ssh_memory_percent",
+                "platform": "hassio",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "%",
+                "original_name": "Terminal & SSH: Memory Percent",
+                "original_icon": "mdi:memory",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.calefactor_current",
+                "config_entry_id": "74c15ff5d0ed9341e4e0c8b0a7937934",
+                "device_id": "b55e42d5776fa47317de4c13efd2dfe3",
+                "area_id": null,
+                "unique_id": "tuya.bf91bc89d028ab1df6qxgicur_current",
+                "platform": "tuya",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": "current",
+                "unit_of_measurement": "A",
+                "original_name": "Calefactor Current",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.calefactor_power",
+                "config_entry_id": "74c15ff5d0ed9341e4e0c8b0a7937934",
+                "device_id": "b55e42d5776fa47317de4c13efd2dfe3",
+                "area_id": null,
+                "unique_id": "tuya.bf91bc89d028ab1df6qxgicur_power",
+                "platform": "tuya",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": "power",
+                "unit_of_measurement": "W",
+                "original_name": "Calefactor Power",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.calefactor_voltage",
+                "config_entry_id": "74c15ff5d0ed9341e4e0c8b0a7937934",
+                "device_id": "b55e42d5776fa47317de4c13efd2dfe3",
+                "area_id": null,
+                "unique_id": "tuya.bf91bc89d028ab1df6qxgicur_voltage",
+                "platform": "tuya",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": "voltage",
+                "unit_of_measurement": "V",
+                "original_name": "Calefactor Voltage",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.deshumidificador_current",
+                "config_entry_id": "74c15ff5d0ed9341e4e0c8b0a7937934",
+                "device_id": "dc7b934b9f295912877951b17d5914ff",
+                "area_id": null,
+                "unique_id": "tuya.bff603553e0421e63danbzcur_current",
+                "platform": "tuya",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": "current",
+                "unit_of_measurement": "A",
+                "original_name": "Deshumidificador Current",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.deshumidificador_power",
+                "config_entry_id": "74c15ff5d0ed9341e4e0c8b0a7937934",
+                "device_id": "dc7b934b9f295912877951b17d5914ff",
+                "area_id": null,
+                "unique_id": "tuya.bff603553e0421e63danbzcur_power",
+                "platform": "tuya",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": "power",
+                "unit_of_measurement": "W",
+                "original_name": "Deshumidificador Power",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.deshumidificador_voltage",
+                "config_entry_id": "74c15ff5d0ed9341e4e0c8b0a7937934",
+                "device_id": "dc7b934b9f295912877951b17d5914ff",
+                "area_id": null,
+                "unique_id": "tuya.bff603553e0421e63danbzcur_voltage",
+                "platform": "tuya",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "supported_features": 0,
+                "device_class": "voltage",
+                "unit_of_measurement": "V",
+                "original_name": "Deshumidificador Voltage",
+                "original_icon": null,
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.sm_a415f_sleep_confidence",
+                "config_entry_id": "9671af50c54a0c201f83256a2bf5930b",
+                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
+                "area_id": null,
+                "unique_id": "47c810ac5bb98e95615f38755b65176d58a40e99bddff58afbabb84d2eff02d8_sleep_confidence",
+                "platform": "mobile_app",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "%",
+                "original_name": "SM-A415F Sleep Confidence",
+                "original_icon": "mdi:sleep",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.sm_a415f_sleep_segment",
+                "config_entry_id": "9671af50c54a0c201f83256a2bf5930b",
+                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
+                "area_id": null,
+                "unique_id": "47c810ac5bb98e95615f38755b65176d58a40e99bddff58afbabb84d2eff02d8_sleep_segment",
+                "platform": "mobile_app",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "ms",
+                "original_name": "SM-A415F Sleep Segment",
+                "original_icon": "mdi:sleep",
+                "entity_category": null
+            },
+            {
+                "entity_id": "sensor.sm_a415f_battery_level",
+                "config_entry_id": "9671af50c54a0c201f83256a2bf5930b",
+                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
+                "area_id": null,
+                "unique_id": "47c810ac5bb98e95615f38755b65176d58a40e99bddff58afbabb84d2eff02d8_battery_level",
+                "platform": "mobile_app",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": "battery",
+                "unit_of_measurement": "%",
+                "original_name": "SM-A415F Battery Level",
+                "original_icon": "mdi:battery-40",
+                "entity_category": "diagnostic"
+            },
+            {
+                "entity_id": "sensor.sm_a415f_battery_state",
+                "config_entry_id": "9671af50c54a0c201f83256a2bf5930b",
+                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
+                "area_id": null,
+                "unique_id": "47c810ac5bb98e95615f38755b65176d58a40e99bddff58afbabb84d2eff02d8_battery_state",
+                "platform": "mobile_app",
+                "name": null,
                 "icon": null,
                 "disabled_by": null,
                 "capabilities": null,
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
-                "original_name": "Calefactor_1",
-                "original_icon": null
+                "original_name": "SM-A415F Battery State",
+                "original_icon": "mdi:battery-minus",
+                "entity_category": "diagnostic"
+            },
+            {
+                "entity_id": "sensor.sm_a415f_do_not_disturb_sensor",
+                "config_entry_id": "9671af50c54a0c201f83256a2bf5930b",
+                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
+                "area_id": null,
+                "unique_id": "47c810ac5bb98e95615f38755b65176d58a40e99bddff58afbabb84d2eff02d8_dnd_sensor",
+                "platform": "mobile_app",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "SM-A415F Do Not Disturb Sensor",
+                "original_icon": "mdi:minus-circle",
+                "entity_category": "config"
+            },
+            {
+                "entity_id": "sensor.sm_a415f_wifi_bssid",
+                "config_entry_id": "9671af50c54a0c201f83256a2bf5930b",
+                "device_id": "d4e50f8b34cd7a98c788cbf34f0402c6",
+                "area_id": null,
+                "unique_id": "47c810ac5bb98e95615f38755b65176d58a40e99bddff58afbabb84d2eff02d8_wifi_bssid",
+                "platform": "mobile_app",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "SM-A415F WiFi BSSID",
+                "original_icon": "mdi:wifi-off",
+                "entity_category": "diagnostic"
             }
         ]
     }

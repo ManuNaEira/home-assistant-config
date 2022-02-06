@@ -50,6 +50,11 @@
                                             "entity": "sensor.9fb096_temperature",
                                             "name": "Despacho",
                                             "secondary_info": "last-updated"
+                                        },
+                                        {
+                                            "entity": "sensor.88393d_temperature",
+                                            "secondary_info": "last-updated",
+                                            "name": "Ba\u00f1o com\u00fan"
                                         }
                                     ],
                                     "show_header_toggle": false,
@@ -69,12 +74,9 @@
                                         },
                                         {
                                             "entity": "switch.bf91bc89d028ab1df6qxgi",
-                                            "name": "Calefactor",
-                                            "secondary_info": "last-changed"
-                                        },
-                                        {
-                                            "entity": "binary_sensor.sonoff_4ch_status",
-                                            "secondary_info": "last-changed"
+                                            "secondary_info": "last-changed",
+                                            "name": "Arbol Navidad",
+                                            "icon": "mdi:power-plug"
                                         }
                                     ],
                                     "title": "Actuador",
@@ -230,6 +232,65 @@
                             "show_state": false,
                             "show_name": false,
                             "camera_view": "live"
+                        }
+                    ]
+                },
+                {
+                    "visible": [
+                        {
+                            "user": "4e3d39a22d854505955cbbf7e6aa68ab"
+                        }
+                    ],
+                    "icon": "mdi:wrench",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Tel\u00e9fonos"
+                                },
+                                {
+                                    "type": "custom:battery-state-card",
+                                    "entity": "sensor.manu_a41_nivel_de_la_bateria",
+                                    "tap_action": "more-info",
+                                    "charging_state": {
+                                        "entity_id": "sensor.manu_a41_estado_de_la_bateria",
+                                        "state": "charging"
+                                    }
+                                },
+                                {
+                                    "type": "custom:battery-state-card",
+                                    "entity": "sensor.iphone_de_zaira_battery_level",
+                                    "tap_action": "more-info",
+                                    "charging_state": {
+                                        "entity_id": "sensor.iphone_de_zaira_battery_state",
+                                        "state": "Charging"
+                                    }
+                                },
+                                {
+                                    "type": "section",
+                                    "label": "Sensores pila CR2032"
+                                },
+                                {
+                                    "type": "custom:battery-state-card",
+                                    "entity": "sensor.8910a7_battery_level",
+                                    "tap_action": "more-info"
+                                },
+                                {
+                                    "type": "custom:battery-state-card",
+                                    "entity": "sensor.9fb096_battery_level",
+                                    "tap_action": "more-info"
+                                },
+                                {
+                                    "type": "custom:battery-state-card",
+                                    "entity": "sensor.88393d_battery_level",
+                                    "tap_action": "more-info",
+                                    "secondary_info": "Cambiada el 4/11/2021, IKEA PLATTBOJ"
+                                }
+                            ],
+                            "title": "Bater\u00edas"
                         }
                     ]
                 }
